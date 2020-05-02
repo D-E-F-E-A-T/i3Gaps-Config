@@ -26,7 +26,7 @@ bindsym $mod+shift+p exec lock
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb black -sb pink -nf pink -sf black -fn 1
 
 # Rofi
 bindsym $mod+s exec rofi -show drun -theme material
