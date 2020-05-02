@@ -16,6 +16,8 @@ bindsym $mod+space exec flameshot gui
 # System Font
 font pango: XXXXX
 
+# focus_follows_mouse no
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
