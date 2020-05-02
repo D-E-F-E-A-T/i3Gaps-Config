@@ -19,8 +19,8 @@ floating_modifier $mod
 # Terminal -> KDE/Konsole
 bindsym $mod+Return exec konsole
 
-# Lock -> i3lock-fancy
-bindsym $mod+shift+p exec lock
+# Lock
+bindsym $mod+shift+p exec i3lock-fancy -t "Enter Password To Unlock!"
 
 # kill focused window
 bindsym $mod+q kill
