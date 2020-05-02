@@ -151,8 +151,8 @@ bar {
 
 
 # Wallapper
-monitor1=""
-monitor2=""
+monitor1="/home/uniminin/Wallpapers/flower.jpg"
+monitor2="/home/uniminin/Wallpapers/landscape-nature.jpg"
 exec_always feh --bg-scale "$monitor1" --bg-scale "$monitor2"
 
 
