@@ -14,7 +14,7 @@ exec_always xrandr --output DP1 --mode 1366x768 --pos 0x312 --rotate normal --ou
 bindsym $mod+space exec flameshot gui
 
 # System Font
-font pango: XXXXX
+font pango: Monospace Display 10
 
 # focus_follows_mouse no
 
@@ -135,7 +135,9 @@ mode "resize" {
 
 # i3-Gaps Bar
 bar {
-        status_command i3status
+        status_command /home/uniminin/.config/i3/bar.sh
+        position bottom
+        font pango:Fira Mono 10
         colors {
 		background $bg-color
 	    	separator #757575
@@ -151,9 +153,8 @@ bar {
 
 
 # Wallapper
-monitor1="/home/uniminin/Wallpapers/flower.jpg"
-monitor2="/home/uniminin/Wallpapers/landscape-nature.jpg"
-exec_always feh --bg-scale "$monitor1" --bg-scale "$monitor2"
+# Monitor 1 and Monitor 2 Respectively!
+exec_always feh --bg-scale /home/uniminin/Wallpapers/flower.jpg --bg-scale /home/uniminin/Wallpapers/landscape-nature.jpg
 
 
 # RICING #
