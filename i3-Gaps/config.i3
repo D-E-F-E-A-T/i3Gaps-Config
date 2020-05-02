@@ -14,7 +14,7 @@ exec_always xrandr --output DP1 --mode 1366x768 --pos 0x312 --rotate normal --ou
 bindsym $mod+space exec flameshot gui
 
 # System Font
-font pango:System San Francisco Display 10
+font pango: XXXXX
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -68,7 +68,7 @@ bindsym $mod+shift+v layout stacking
 # bindsym $mod+space focus mode_toggle
 
 
-# Custom WorkSpaces
+# Custom WorkSpaces with Awesome-Fonts
 set $ws1 "1: Research "
 set $ws2 "2: Miscellaneous "
 set $ws3 "3: Desktop "
@@ -149,7 +149,9 @@ bar {
 
 
 # Wallapper
-exec_always feh --bg-scale /home/uniminin/Wallpapers/i3-walls/flower.jpg --bg-scale /home/uniminin/Wallpapers/i3-walls/green.jpg
+monitor1=""
+monitor2=""
+exec_always feh --bg-scale "$monitor1" --bg-scale "$monitor2"
 
 
 # RICING #
