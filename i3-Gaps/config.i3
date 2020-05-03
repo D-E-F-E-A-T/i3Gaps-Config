@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 03 May, 2020 @ 3:20PM.
+# Last-Updated: Sun 03 May, 2020 @ 7:00PM.
 
 # i3 Stuff #
 set $mod Mod4
