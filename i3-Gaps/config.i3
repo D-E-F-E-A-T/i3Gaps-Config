@@ -1,64 +1,65 @@
-# Uniminin's Custom i3-Gaps Config.
-# i3 config file (v4)
+## Uniminin's Custom i3-Gaps Configuration File. ##
+# Last-Updated: Sun 03 May, 2020 @ 3:20PM.
 
-# i3 Stuff
+# i3 Stuff #
 set $mod Mod4
 
-# Auto Start
+# Auto Start #
 exec --no-startup-id picom -b
 
-# Dual Monitor
-exec_always xrandr --output DP1 --mode 1366x768 --pos 0x312 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
+# Dual Monitor #
+exec --no-startup-id xrandr --output DP1 --mode 1366x768 --pos 0x312 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
 
-# Screenshot
+# Screenshot #
 bindsym $mod+space exec flameshot gui
 
-# System Font
+# System Font #
 font pango: Monospace Display 10
 
-# focus_follows_mouse no
+# Mouse Follow Focus (window) #
+focus_follows_mouse yes
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# Mouse+$mod -> Floating Window Position Change #
 floating_modifier $mod
 
-# Terminal -> KDE/Konsole
+# Terminal -> KDE/Konsole #
 bindsym $mod+Return exec konsole
 
-# Lock
-bindsym $mod+shift+p exec i3lock-fancy -t "Enter Password To Unlock!"
+# Lock #
+bindsym $mod+l exec i3lock-fancy -t "Enter Password To Unlock!"
 
 # kill focused window
 bindsym $mod+q kill
 
-# Dmenu
+# Dmenu #
 bindsym $mod+d exec dmenu_run -nb black -sb pink -nf pink -sf black -fn 1
 
-# Rofi
+# Rofi #
 bindsym $mod+s exec rofi -show drun -theme material
 
 
-# Window Focus
+# Window Focus #
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# Window Change Position
+# Change Window Position #
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# Horizontal Orientation Split
+# Horizontal Orientation Split #
 bindsym $mod+h split h
 
-# Vertical Orientation Split
+# Vertical Orientation Split #
 bindsym $mod+v split v
 
-# Focused fullscreen
+# Focus Fullscreen #
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# Container Layouts (stacked, tabbed, toggle split) #
 bindsym $mod+shift+x layout stacking
 bindsym $mod+shift+z layout tabbed
 bindsym $mod+shift+v layout stacking
@@ -69,20 +70,26 @@ bindsym $mod+shift+v layout stacking
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
 
+##  SHORTCUTS (Applications)  ##
+bindsym $mod+F1 exec chromium
+bindsym $mod+F2 exec qutebrowser
+bindsym $mod+F3 exec firefox
+bindsym $mod+F4 exec nautilus
+bindsym $mod+F5 exec pavucontrol
 
-# Custom WorkSpaces with Awesome-Fonts
-set $ws1 "1: Research "
+# Custom WorkSpaces with Awesome-Fonts #
+set $ws1 "1: Research "
 set $ws2 "2: Miscellaneous "
-set $ws3 "3: Desktop "
-set $ws4 "4: Desktop "
-set $ws5 "5: Desktop "
-set $ws6 "6: Desktop "
-set $ws7 "7: Desktop "
-set $ws8 "8: Desktop "
-set $ws9 "9: Desktop "
-set $ws10 "10: Desktop "
+set $ws3 "3: Desktop "
+set $ws4 "4: Desktop "
+set $ws5 "5: Desktop "
+set $ws6 "6: Desktop "
+set $ws7 "7: Desktop "
+set $ws8 "8: Desktop "
+set $ws9 "9: Desktop "
+set $ws10 "10: Desktop "
 
-# Switching To WorkSpaces
+# Switching To WorkSpaces #
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -94,7 +101,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-# move focused container to workspace
+# Move Window To Workspaces #
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -106,19 +113,40 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-# Reload Config
+# Floating Windows Applications #
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="VirtualBox"] floating enable
+
+# System -> Logout, Reboot, Shutdown Funtion #
+bindsym $mod+Ctrl+Delete mode "$mode_system"
+set $mode_system (e)xit, (r)eboot, (s)hutdown
+mode "$mode_system" {
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # exit system mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+
+# Reload Config #
 bindsym $mod+Shift+c reload
 
-# Restart i3-Gaps
+# Restart i3-Gaps #
 bindsym $mod+Shift+r restart
 
-# Exit i3-Gaps (logs out of X session)
+# Exit i3-Gaps (logs out of X session) #
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3-Gaps? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# Resize Mode
+# Resize Mode #
 bindsym $mod+r mode "resize"
 
-# resize window (you can also use the mouse for that)
+
+# Keyboard Binding For Window Resizing #
 mode "resize" {
         # Bindings
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -133,9 +161,9 @@ mode "resize" {
 }
 
 
-# i3-Gaps Bar
+# i3-Gaps Bar #
 bar {
-        status_command /home/uniminin/.config/i3/bar.sh
+        status_command i3blocks -c /etc/i3blocks.conf
         position bottom
         font pango:Fira Mono 10
         colors {
@@ -148,13 +176,13 @@ bar {
 	}
 }
 
-# Load At Startup (Always)
-# exec_always firefox
+# hide/unhide i3bar #
+bindsym $mod+m bar mode toggle
 
 
-# Wallapper
+# Desktop Wallappers #
 # Monitor 1 and Monitor 2 Respectively!
-exec_always feh --bg-scale /home/uniminin/Wallpapers/flower.jpg --bg-scale /home/uniminin/Wallpapers/landscape-nature.jpg
+exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/flower.jpg --bg-scale /home/uniminin/Wallpapers/landscape-nature.jpg
 
 
 # RICING #
@@ -164,12 +192,62 @@ set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
-# window colors
+# window colors #
 #                       border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          #00ff00
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
-# Hiding Side Borders
-hide_edge_borders both
+# Hiding Side Borders #
+hide_edge_borders none
+
+
+#############################
+### settings for i3-gaps: ###
+#############################
+
+# inner/outer gaps #
+gaps inner 5
+gaps outer 0
+
+# Smart gaps #
+smart_gaps on
+smart_borders on
+
+# Gaps-Mode #
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
