@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 03 May, 2020 @ 7:00PM.
+# Last-Updated: Sun 03 May, 2020 @ 3:20PM.
 
 # i3 Stuff #
 set $mod Mod4
@@ -9,6 +9,11 @@ exec --no-startup-id picom -b
 
 # Dual Monitor #
 exec --no-startup-id xrandr --output DP1 --mode 1366x768 --pos 0x312 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
+
+# Notification #
+exec --no-startup-id deadd-notification-center
+bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
+
 
 # Screenshot #
 bindsym $mod+space exec flameshot gui
@@ -118,6 +123,8 @@ for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Nautilus"] floating enable
 for_window [class="VirtualBox"] floating enable
+for_window [class="virt-manager"] floating enable
+
 
 # System -> Logout, Reboot, Shutdown Funtion #
 bindsym $mod+Ctrl+Delete mode "$mode_system"
