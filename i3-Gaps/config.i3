@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 04 May, 2020 @ 1:20PM.
+# Last-Updated: Sun 04 May, 2020 @ 3:05PM.
 
 # i3 Stuff #
 set $mod Mod4
@@ -70,7 +70,7 @@ bindsym $mod+shift+z layout tabbed
 bindsym $mod+shift+v layout stacking
 
 # toggle tiling / floating
-# bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
