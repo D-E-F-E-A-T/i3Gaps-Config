@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 03 May, 2020 @ 3:20PM.
+# Last-Updated: Sun 04 May, 2020 @ 1:20PM.
 
 # i3 Stuff #
 set $mod Mod4
@@ -123,7 +123,8 @@ for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Nautilus"] floating enable
 for_window [class="VirtualBox"] floating enable
-for_window [class="virt-manager"] floating enable
+for_window [class="jetbrains-toolbox"] floating enable
+for_window [class="kate"] floating enable
 
 
 # System -> Logout, Reboot, Shutdown Funtion #
@@ -169,22 +170,22 @@ mode "resize" {
 
 
 # i3-Gaps Bar #
-bar {
-        status_command i3blocks -c /etc/i3blocks.conf
-        position bottom
-        font pango:Fira Mono 10
-        colors {
-		background $bg-color
-	    	separator #757575
+#bar {
+#        status_command i3blocks -c /etc/i3blocks.conf
+#        position bottom
+#        font pango:Fira Mono 10
+#        colors {
+#		background $bg-color
+#	    	separator #757575
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+#		focused_workspace  $bg-color          $bg-color          $text-color
+#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+#	}
+#}
 
 # hide/unhide i3bar #
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
 
 # Desktop Wallappers #
@@ -208,6 +209,9 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Hiding Side Borders #
 hide_edge_borders none
+
+# POLYBAR #
+exec --no-startup-id ~/.config/polybar/launch.sh
 
 
 #############################
