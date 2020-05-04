@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 04 May, 2020 @ 3:05PM.
+# Last-Updated: Sun 04 May, 2020 @ 3:10PM.
 
 # i3 Stuff #
 set $mod Mod4
@@ -19,7 +19,7 @@ bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 bindsym $mod+space exec flameshot gui
 
 # System Font #
-font pango: Monospace Display 10
+font pango: Monospace Display 0
 
 # Mouse Follow Focus (window) #
 focus_follows_mouse yes
