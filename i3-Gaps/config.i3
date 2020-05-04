@@ -19,7 +19,7 @@ bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 bindsym $mod+space exec flameshot gui
 
 # System Font #
-font pango: Monospace Display 0
+font pango: Monospace Display 10
 
 # Mouse Follow Focus (window) #
 focus_follows_mouse yes
@@ -225,6 +225,10 @@ gaps outer 0
 # Smart gaps #
 smart_gaps on
 smart_borders on
+
+# No Title Bar #
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
 
 # Gaps-Mode #
 set $mode_gaps Gaps: (o) outer, (i) inner
