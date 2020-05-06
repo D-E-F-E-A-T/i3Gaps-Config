@@ -8,7 +8,7 @@ set $mod Mod4
 exec --no-startup-id picom -b
 
 # Dual Monitor #
-exec --no-startup-id xrandr --output DP1 --mode 1366x768 --pos 0x312 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
+exec --no-startup-id xrandr --output DP1 --mode "1366x768" --rate 60 --pos 0x312 --rotate normal --output HDMI1 --primary --mode "1920x1080" --rate 75 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
 
 # Notification #
 exec --no-startup-id deadd-notification-center
@@ -125,6 +125,7 @@ for_window [class="Nautilus"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="kate"] floating enable
+for_window [class="gparted"] floating enable
 
 
 # System -> Logout, Reboot, Shutdown Funtion #
