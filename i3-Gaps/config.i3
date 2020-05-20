@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 11 May, 2020 @ 2:10PM.
+# Last-Updated: Sun 20 May, 2020 @ 3:30PM.
 
 # i3 Stuff #
 set $mod Mod4
@@ -125,8 +125,6 @@ for_window [class="Nautilus"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="kate"] floating enable
-for_window [class="gparted"] floating enable
-for_window [class="vlc"] floating enable
 for_window [class="kite"] floating enable
 
 # System -> Logout, Reboot, Shutdown Funtion #
