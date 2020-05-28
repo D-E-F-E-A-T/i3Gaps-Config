@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 20 May, 2020 @ 3:30PM.
+# Last-Updated: Sun 28 May, 2020 @ 11:47PM.
 
 # i3 Stuff #
 set $mod Mod4
@@ -40,6 +40,7 @@ bindsym $mod+q kill
 bindsym $mod+d exec dmenu_run -nb black -sb pink -nf pink -sf black -fn 1
 
 # Rofi #
+bindsym $mod+w exec rofi -show window -theme slate
 bindsym $mod+s exec rofi -show drun -theme material
 
 
@@ -79,7 +80,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+F1 exec chromium
 bindsym $mod+F2 exec qutebrowser
 bindsym $mod+F3 exec firefox
-bindsym $mod+F4 exec nautilus
+bindsym $mod+F4 exec sudo nautilus
 bindsym $mod+F5 exec pavucontrol
 
 # Custom WorkSpaces with Awesome-Fonts #
