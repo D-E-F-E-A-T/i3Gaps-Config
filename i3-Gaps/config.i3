@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 28 May, 2020 @ 11:47PM.
+# Last-Updated: Sun 29 May, 2020 @ 8:23PM
 
 # i3 Stuff #
 set $mod Mod4
@@ -78,10 +78,10 @@ bindsym $mod+Shift+space floating toggle
 
 ##  SHORTCUTS (Applications)  ##
 bindsym $mod+F1 exec chromium
-bindsym $mod+F2 exec qutebrowser
-bindsym $mod+F3 exec firefox
-bindsym $mod+F4 exec sudo nautilus
-bindsym $mod+F5 exec pavucontrol
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec sudo nautilus
+bindsym $mod+F4 exec pavucontrol
+bindsym $mod+F5 exec sudo xfce4-settings-manager
 
 # Custom WorkSpaces with Awesome-Fonts #
 set $ws1 "1: Research "
