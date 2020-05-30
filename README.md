@@ -25,7 +25,7 @@
 * <a href=https://www.archlinux.org/packages/extra/x86_64/nautilus/>nautilus</a> as file manager.
 * <a href=https://github.com/karlstav/cava>cava</a> as music visualizer.
 * ~~i3bar~~ & ~~i3blocks~~ not anymore.
-* <a href=https://github.com/dylanaraps/neofetch>neofetch</a>, <a href=https://github.com/dylanaraps/pfetch>pfetch</a> and <a href=https://github.com/stark/Color-Scripts>color-scripts</a> as terminal ricings.
+* <a href=https://github.com/dylanaraps/neofetch>neofetch</a>, <a href=https://github.com/dylanaraps/pfetch>pfetch</a>, <a href=https://github.com/stark/Color-Scripts>color-scripts</a> and <a href=https://github.com/shlomif/fortune-mod>fortune-mod</a> as terminal ricings.
 * Theme: <a href=https://github.com/horst3180/arc-theme>arc-theme</a>(arc-darker | GTK).
 * Icon Theme: <a href=https://github.com/vinceliuice/McMojave-circle>McMojave-circle</a>(McMojave-circle-grey-dark).
 * Cursor Theme: <a href=https://github.com/KaizIqbal/Bibata_Cursor>Bibata-Cursor</a>(Bibata-Oil).
