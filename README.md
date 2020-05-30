@@ -12,8 +12,10 @@
 * <a href=https://wiki.archlinux.org/index.php/Xrandr>Xrandr</a>  to set the size, orientation or reflection of the outputs for my dual monitor screens.
 * <a href=https://www.archlinux.org/packages/community/any/arandr/>arandr</a> to produce a script for my screens setup with the help of gui.
 * <a href=https://aur.archlinux.org/packages/deadd-notification-center/>deadd-notification-center</a> as Notification manager.
+* <a href=https://github.com/NoiSek/Aether>Aether</a> as login manager (lightdm).
 * <a href=https://flameshot.js.org/>Flameshot</a> as screenshot tool.
 * <a href=https://konsole.kde.org/>Konsole</a> as terminal emulator.
+* <a href=https://wiki.archlinux.org/index.php/Linux-ck>linux-ck</a> as the default kernel.
 * <a href=https://github.com/meskarune/i3lock-fancy/>i3lock-fancy</a> as screen-locker.
 * <a href=https://www.archlinux.org/packages/extra/x86_64/feh/>feh</a> to set wallpaper.
 * <a href=https://tools.suckless.org/dmenu/>dmenu</a> as a dymanic menu.
@@ -30,6 +32,7 @@
 * Icon Theme: <a href=https://github.com/vinceliuice/McMojave-circle>McMojave-circle</a>(McMojave-circle-grey-dark).
 * Cursor Theme: <a href=https://github.com/KaizIqbal/Bibata_Cursor>Bibata-Cursor</a>(Bibata-Oil).
 * Bash/Bashrc? using helmuthdu's <a href=https://github.com/helmuthdu/dotfiles/blob/master/.bashrc>.bashrc</a>.
+* Custom Grub2 theme & icons.
 * And many more.
 
 ## My-Dotfiles
