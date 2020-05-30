@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 30 May, 2020 @ 6:00PM
+# Last-Updated: Sun 30 May, 2020 @ 6:40PM
 
 # i3 Stuff #
 set $mod Mod4
@@ -41,7 +41,7 @@ bindsym $mod+d exec dmenu_run -nb black -sb pink -nf pink -sf black -fn 1
 
 # Rofi #
 bindsym $mod+w exec rofi -show window -theme slate
-rofi -show drun -theme material -font "hack 10" -show combi -icon-theme "McMojave-circle-grey-dark" -show-icons
+bindsym $mod+s exec rofi -show drun -theme material -font "hack 10" -show combi -icon-theme "McMojave-circle-grey-dark" -show-icons
 
 
 # Window Focus #
