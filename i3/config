@@ -1,12 +1,14 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 30 May, 2020 @ 6:40PM
+# Last-Updated: Sun 8 June, 2020 @ 11:11PM
 
 # i3 Stuff #
 set $mod Mod4
 
 # Auto Start #
-exec --no-startup-id picom -b
+exec --no-startup-id picom --config /home/uniminin/.config/picom/picom.conf -b
 exec_always --no-startup-id autotiling
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
 
 # Dual Monitor #
 exec --no-startup-id xrandr --output DP1 --mode "1366x768" --rate 59.79 --pos 0x312 --rotate normal --output HDMI1 --primary --mode "1920x1080" --rate 74.97 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
@@ -42,7 +44,7 @@ bindsym $mod+d exec dmenu_run -nb black -sb pink -nf pink -sf black -fn 1
 
 # Rofi #
 bindsym $mod+w exec rofi -show window -theme slate
-bindsym $mod+s exec rofi -show drun -theme material -font "hack 10" -show combi -icon-theme "McMojave-circle-grey-dark" -show-icons
+bindsym $mod+s exec rofi -show drun -theme material -font "hack 20" -show combi -icon-theme "McMojave-circle-grey-dark" -show-icons
 
 
 # Window Focus #
@@ -85,16 +87,16 @@ bindsym $mod+F4 exec pavucontrol
 bindsym $mod+F5 exec sudo xfce4-settings-manager
 
 # Custom WorkSpaces with Awesome-Fonts #
-set $ws1 "1: Desktop "
-set $ws2 "2: Desktop "
-set $ws3 "3: Desktop "
-set $ws4 "4: Desktop "
-set $ws5 "5: Desktop "
-set $ws6 "6: Desktop "
-set $ws7 "7: Desktop "
-set $ws8 "8: Desktop "
-set $ws9 "9: Desktop "
-set $ws10 "10: Desktop "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # Switching To WorkSpaces #
 bindsym $mod+1 workspace number $ws1
@@ -129,20 +131,6 @@ for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="kate"] floating enable
 for_window [class="kite"] floating enable
 
-# System -> Logout, Reboot, Shutdown Funtion #
-bindsym $mod+Ctrl+Delete mode "$mode_system"
-set $mode_system (e)xit, (r)eboot, (s)hutdown
-mode "$mode_system" {
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym s exec --no-startup-id i3exit shutdown, mode "default"
-
-    # exit system mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-
 # Reload Config #
 bindsym $mod+Shift+c reload
 
@@ -170,29 +158,9 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-
-# i3-Gaps Bar #
-#bar {
-#        status_command i3blocks -c /etc/i3blocks.conf
-#        position bottom
-#        font pango:Fira Mono 10
-#        colors {
-#		background $bg-color
-#	    	separator #757575
-		#                  border             background         text
-#		focused_workspace  $bg-color          $bg-color          $text-color
-#		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-#		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-#	}
-#}
-
-# hide/unhide i3bar #
-#bindsym $mod+m bar mode toggle
-
-
 # Desktop Wallappers #
 # Monitor 1 and Monitor 2 Respectively!
-exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/flower.jpg --bg-scale /home/uniminin/Wallpapers/landscape-nature.jpg
+exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/Red.png --bg-scale /home/uniminin/Wallpapers/Dust.png
 
 
 # RICING #
@@ -204,10 +172,10 @@ set $urgent-bg-color     #E53935
 
 # window colors #
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#client.focused          $bg-color           $bg-color          $text-color          #00ff00
+#client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
+#client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
+#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 # Hiding Side Borders #
 hide_edge_borders none
@@ -221,7 +189,7 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 #############################
 
 # inner/outer gaps #
-gaps inner 5
+gaps inner 10
 gaps outer 0
 
 # Smart gaps #
@@ -229,42 +197,5 @@ smart_gaps on
 smart_borders on
 
 # No Title Bar #
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 3
 new_window 1pixel
-
-# Gaps-Mode #
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+Shift+g mode "$mode_gaps"
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
-
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
