@@ -1,0 +1,202 @@
+## Uniminin's Custom i3-Gaps Configuration File. ##
+# Last-Updated: Sun 9 June, 2020 @ 9:07AM
+
+# i3 Stuff #
+set $mod Mod4
+
+# Auto Start #
+exec --no-startup-id picom --config /home/uniminin/.config/picom/picom.conf -b
+exec_always --no-startup-id autotiling
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xdg-settings set default-web-browser firefox.desktop
+
+# Dual Monitor #
+exec --no-startup-id xrandr --output DP1 --mode "1366x768" --rate 59.79 --pos 0x312 --rotate normal --output HDMI1 --primary --mode "1920x1080" --rate 74.97 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
+
+# Notification #
+exec --no-startup-id deadd-notification-center
+bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
+
+
+# Screenshot #
+bindsym $mod+space exec flameshot gui
+
+# System Font #
+font pango: Monospace Display 10
+
+# Mouse Follow Focus (window) #
+focus_follows_mouse yes
+
+# Mouse+$mod -> Floating Window Position Change #
+floating_modifier $mod
+
+# Terminal -> KDE/Konsole #
+bindsym $mod+Return exec konsole
+
+# Lock #
+bindsym $mod+l exec i3lock-fancy -t "Enter Password To Unlock!"
+
+# kill focused window
+bindsym $mod+q kill
+
+# Dmenu #
+bindsym $mod+d exec dmenu_run -nb black -sb pink -nf pink -sf black -fn 1
+
+# Rofi #
+bindsym $mod+Tab exec rofi -show window -theme slate
+bindsym $mod+s exec rofi -show drun -theme material -font "hack 20" -show combi -icon-theme "McMojave-circle-grey-dark" -show-icons
+
+
+# Window Focus #
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Change Window Position #
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Horizontal Orientation Split #
+bindsym $mod+h split h
+
+# Vertical Orientation Split #
+bindsym $mod+v split v
+
+# Focus Fullscreen #
+bindsym $mod+f fullscreen toggle
+
+# Container Layouts (stacked, tabbed, toggle split) #
+bindsym $mod+shift+x layout stacking
+bindsym $mod+shift+z layout tabbed
+bindsym $mod+shift+v layout stacking
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
+
+##  SHORTCUTS (Applications)  ##
+bindsym $mod+F1 exec chromium
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec sudo nautilus
+bindsym $mod+F4 exec pavucontrol
+bindsym $mod+F5 exec sudo xfce4-settings-manager
+
+# Custom WorkSpaces with Awesome-Fonts #
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Switching To WorkSpaces #
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move Window To Workspaces #
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Floating Windows Applications #
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Nautilus"] floating enable
+for_window [class="VirtualBox"] floating enable
+for_window [class="jetbrains-toolbox"] floating enable
+for_window [class="kate"] floating enable
+for_window [class="kite"] floating enable
+
+# Reload Config #
+bindsym $mod+Shift+c reload
+
+# Restart i3-Gaps #
+bindsym $mod+Shift+r restart
+
+# Exit i3-Gaps (logs out of X session) #
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3-Gaps? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Resize Mode #
+bindsym $mod+r mode "resize"
+
+
+# Keyboard Binding For Window Resizing #
+mode "resize" {
+        # Bindings
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # Back To Normal
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# Desktop Wallappers #
+# Monitor 1 and Monitor 2 Respectively!
+exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/Red.png --bg-scale /home/uniminin/Wallpapers/Dust.png
+
+
+# RICING #
+set $bg-color 	         #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+# window colors #
+#                       border              background         text                 indicator
+#client.focused          $bg-color           $bg-color          $text-color          #00ff00
+#client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
+#client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  #00ff00
+#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+
+# Hiding Side Borders #
+hide_edge_borders none
+
+# POLYBAR #
+exec --no-startup-id ~/.config/polybar/launch.sh
+
+
+#############################
+### settings for i3-gaps: ###
+#############################
+
+# inner/outer gaps #
+gaps inner 10
+gaps outer 0
+
+# Smart gaps #
+smart_gaps on
+smart_borders on
+
+# No Title Bar #
+for_window [class="^.*"] border pixel 3
+new_window 1pixel
