@@ -6,6 +6,8 @@
 </p>
 
 ## using
+* <a href=https://exherbo.org/>Exherbo GNU/Linux</a> as main system OS (atm).
+* <a href=https://packages.gentoo.org/packages/sys-kernel/ck-sources3>ck-kernel</a> as Default Kernel.
 * <a href=https://github.com/Airblader/i3>i3-Gaps</a> as WM.
 * <a href=https://fishshell.com/>fish</a> as default shell with <a href=https://github.com/oh-my-fish/oh-my-fish>OMF</a>.
 * <a href=https://wiki.archlinux.org/index.php/Picom>Picoms</a> as X compositor for fixing tearing issues.
