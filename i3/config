@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 9 June, 2020 @ 1:42PM
+# Last-Updated: Sun 9 June, 2020 @ 2:18PM
 
 # i3 Stuff #
 set $mod Mod4
@@ -87,7 +87,7 @@ bindsym $mod+F3 exec sudo pcmanfm
 bindsym $mod+F4 exec pavucontrol
 bindsym $mod+F5 exec sudo xfce4-settings-manager
 
-# Custom WorkSpaces with Awesome-Fonts #
+# WorkSpaces #
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -97,7 +97,6 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
 
 # Switching To WorkSpaces #
 bindsym $mod+1 workspace number $ws1
