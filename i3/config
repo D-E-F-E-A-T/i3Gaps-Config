@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 9 June, 2020 @ 9:07AM
+# Last-Updated: Sun 9 June, 2020 @ 1:42PM
 
 # i3 Stuff #
 set $mod Mod4
@@ -83,7 +83,7 @@ bindsym $mod+Shift+space floating toggle
 ##  SHORTCUTS (Applications)  ##
 bindsym $mod+F1 exec chromium
 bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec sudo nautilus
+bindsym $mod+F3 exec sudo pcmanfm
 bindsym $mod+F4 exec pavucontrol
 bindsym $mod+F5 exec sudo xfce4-settings-manager
 
@@ -126,7 +126,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # Floating Windows Applications #
 for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="Nautilus"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="jetbrains-toolbox"] floating enable
 for_window [class="kate"] floating enable
