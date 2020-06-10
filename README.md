@@ -41,7 +41,7 @@
 * Theme: <a href=https://github.com/horst3180/arc-theme>arc-theme</a>(arc-darker | GTK).
 * Icon Theme: <a href=https://github.com/vinceliuice/McMojave-circle>McMojave-circle</a>(McMojave-circle-grey-dark).
 * Cursor Theme: <a href=https://github.com/KaizIqbal/Bibata_Cursor>Bibata-Cursor</a>(Bibata-Oil).
-* Bash/Bashrc? using helmuthdu's <a href=https://github.com/helmuthdu/dotfiles/blob/master/.bashrc>.bashrc</a>.
+* helmuthdu's <a href=https://github.com/helmuthdu/dotfiles/blob/master/.bashrc>.bashrc</a>.
 * Custom Grub2 theme & icons.
 * And many more.
 
