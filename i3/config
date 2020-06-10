@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 9 June, 2020 @ 2:18PM
+# Last-Updated: Sun 10 June, 2020 @ 3:33PM
 
 # i3 Stuff #
 set $mod Mod4
@@ -159,7 +159,7 @@ mode "resize" {
 
 # Desktop Wallappers #
 # Monitor 1 and Monitor 2 Respectively!
-exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/Red.png --bg-scale /home/uniminin/Wallpapers/Dust.png
+exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/red-guile.jpg --bg-scale /home/uniminin/Wallpapers/Dust.png
 
 
 # RICING #
