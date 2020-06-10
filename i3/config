@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 10 June, 2020 @ 9:10PM
+# Last-Updated: Sun 10 June, 2020 @ 11:10PM
 
 
 ###############################
@@ -30,7 +30,7 @@ exec --no-startup-id xset -dpms
 exec --no-startup-id xdg-settings set default-web-browser firefox.desktop
 
 # Dual Monitor #
-exec --no-startup-id xrandr --output DP1 --mode "1366x768" --rate 59.79 --pos 0x312 --rotate normal --output HDMI1 --primary --mode "1920x1080" --rate 74.97 --pos 1366x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off
+exec --no-startup-id xrandr --output HDMI1 --primary --mode "1920x1080" --rate 74.97 --pos 1366x0 --rotate normal --output DP1 --mode "1366x768" --rate 59.79 --pos 0x312 --rotate normal
 
 # Notification #
 exec --no-startup-id deadd-notification-center
@@ -73,18 +73,6 @@ bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 ###########################
 ### Workspace Settings  ###
 ###########################
-
-# Workspaces #
-workspace 1 output HDMI1
-workspace 2 output HDMI1
-workspace 3 output HDMI1
-workspace 4 output HDMI1
-workspace 5 output HDMI1
-workspace 6 output HDMI1
-workspace 7 output HDMI1
-workspace 8 output HDMI1
-workspace 9 output DP1
-workspace 10 output DP1
 
 # Switching To Workspaces #
 bindsym $mod+0 workspace 10
