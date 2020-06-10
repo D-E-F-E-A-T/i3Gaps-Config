@@ -20,6 +20,9 @@ alias ls="exa -al --color=always --group-directories-first"
 alias la="exa -a --color=always --group-directories-first"
 alias ll="exa -l --color=always --group-directories-first"
 
+# Swallow 
+alias mpv="swallow mpv"
+alias gparted="swallow sudo gparted"
 
 # Extras
 alias free="free -m"
