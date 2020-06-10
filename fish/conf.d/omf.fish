@@ -21,7 +21,6 @@ alias la="exa -a --color=always --group-directories-first"
 alias ll="exa -l --color=always --group-directories-first"
 
 # Swallow
-alias swallow="python /usr/bin/i3-swallow"
 alias gparted="swallow sudo gparted"
 alias play="swallow mpv"
 alias view="swallow feh"
