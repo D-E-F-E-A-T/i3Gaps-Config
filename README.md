@@ -21,6 +21,7 @@
 * <a href=https://www.archlinux.org/packages/community/any/arandr/>arandr</a> to produce a script for my screens setup with the help of gui.
 * <a href=https://aur.archlinux.org/packages/deadd-notification-center/>deadd-notification-center</a> as Notification manager.
 * <a href=https://github.com/NoiSek/Aether>Aether</a> as login manager (lightdm).
+* <a href=https://github.com/jamesofarrell/i3-swallow>i3-swallow</a> as dm's jealousy swallower.
 * <a href=https://flameshot.js.org/>Flameshot</a> as screenshot tool.
 * <a href=https://konsole.kde.org/>Konsole</a> as terminal emulator.
 * <a href=https://wiki.archlinux.org/index.php/Linux-ck>linux-ck</a> as the default kernel.
