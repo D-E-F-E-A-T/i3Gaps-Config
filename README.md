@@ -2,13 +2,13 @@
 <h4 align="center">Monitor 1 (HDMI1/1920x1080)</h4>
 
 <p align="center">
-  <img src="https://github.com/Uniminin/i3Gaps-Config/blob/master/Screenshots/M1.png"/>
+  <img src="https://github.com/Uniminin/i3Gaps-Config/blob/master/Screenshots/MN1.png"/>
 </p>
 
 <h4 align="center">Monitor 2 (DPI1/1366x768)</h4>
 
 <p align="center">
-  <img src="https://github.com/Uniminin/i3Gaps-Config/blob/master/Screenshots/M2.png"/>
+  <img src="https://github.com/Uniminin/i3Gaps-Config/blob/master/Screenshots/MN2.png"/>
 </p>
 
 ## using
