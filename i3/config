@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 10 June, 2020 @ 11:15PM
+# Last-Updated: Sun 12 June, 2020 @ 2:20PM
 
 
 ###############################
@@ -201,7 +201,7 @@ font pango: Monospace Display 10
 
 # window colors #
 #                       Border              Background         Text                 Indicator
-client.focused          #008cff             #008cff            #008cff              #008cff
+client.focused          #d11515             #d11515            #d11515              #d11515
 client.unfocused        #282c36             #282c36            #282c36              #282c36
 client.focused_inactive #282c36             #282c36            #282c36              #282c36
 client.urgent           #282c36             #282c36            #282c36              #282c36
