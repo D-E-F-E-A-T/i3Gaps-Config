@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Sun 12 June, 2020 @ 2:20PM
+# Last-Updated: Tue 23 June, 2020 @ 3:00PM
 
 
 ###############################
@@ -21,6 +21,9 @@ exec --no-startup-id picom --config /home/uniminin/.config/picom/picom.conf -b
 
 # Swallow #
 exec_always --no-startup-id autotiling
+
+# Flash #
+exec_always --no-startup-id flashfocus
 
 # i3-Gaps No Sleep #
 exec --no-startup-id xset s off
