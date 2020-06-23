@@ -28,7 +28,7 @@
 * <a href=https://github.com/meskarune/i3lock-fancy/>i3lock-fancy</a> as screen-locker.
 * <a href=https://www.archlinux.org/packages/extra/x86_64/feh/>feh</a> to set wallpaper.
 * <a href=https://tools.suckless.org/dmenu/>dmenu</a> as a dymanic menu.
-* <a href=https://github.com/fennerm/flashfocus>flashfocus</a> as wind flasher.
+* <a href=https://github.com/fennerm/flashfocus>flashfocus</a> as window flasher.
 * <a href=https://github.com/davatorium/rofi>rofi</a> as window switcher & application launcher.
 * <a href=https://www.archlinux.org/packages/community/x86_64/lxappearance/>lxappearance</a> for customizing theme, icon, cursor, font etc.
 * <a href=https://www.archlinux.org/packages/community/x86_64/kvantum-qt5/>kvantum</a> for customizing qt themes.
