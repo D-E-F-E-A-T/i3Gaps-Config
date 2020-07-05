@@ -1,5 +1,5 @@
 ## Uniminin's Custom i3-Gaps Configuration File. ##
-# Last-Updated: Tue 23 June, 2020 @ 3:00PM
+# Last-Updated: Monday 6 July, 2020 @ 12:00AM
 
 
 ###############################
@@ -22,9 +22,6 @@ exec --no-startup-id picom --config /home/uniminin/.config/picom/picom.conf -b
 # Swallow #
 exec_always --no-startup-id autotiling
 
-# Flash #
-exec_always --no-startup-id flashfocus
-
 # i3-Gaps No Sleep #
 exec --no-startup-id xset s off
 exec --no-startup-id xset -dpms
@@ -39,7 +36,7 @@ exec --no-startup-id xrandr --output HDMI1 --primary --mode "1920x1080" --rate 7
 exec --no-startup-id deadd-notification-center
 
 # [WALLPAPERS] Monitor 1 and Monitor 2 Respectively
-exec --no-startup-id feh --bg-scale /home/uniminin/Wallpapers/red-guile.jpg --bg-scale /home/uniminin/Wallpapers/Dust.png
+exec --no-startup-id feh --bg-fill /home/uniminin/Wallpapers/red-guile.jpg --bg-fill /home/uniminin/Wallpapers/Dust.png
 
 # POLYBAR #
 exec --no-startup-id ~/.config/polybar/launch.sh
